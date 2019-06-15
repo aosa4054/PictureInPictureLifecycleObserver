@@ -23,7 +23,7 @@ android {
 
     buildTypes {
         getByName("release") {
-            isMinifyEnabled = false
+            isMinifyEnabled = true
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")        }
     }
 
@@ -36,7 +36,7 @@ dependencies {
     testImplementation("junit:junit:4.12")
     androidTestImplementation("androidx.test:runner:1.1.1")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.1.1")
-    compile("androidx.core:core-ktx:1.0.2")
+    implementation("androidx.core:core-ktx:1.0.2")
 }
 repositories {
     mavenCentral()
