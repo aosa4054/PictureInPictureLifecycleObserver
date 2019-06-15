@@ -5,6 +5,7 @@ plugins {
 apply {
     plugin("kotlin-android")
     plugin("kotlin-android-extensions")
+    plugin("com.github.dcendents.android-maven")
 }
 
 android {
