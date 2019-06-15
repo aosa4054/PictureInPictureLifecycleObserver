@@ -1,4 +1,4 @@
 <resources>
-    <string name="app_name">Picture In Picture Lifecycle Observer</string>
+    <string name="app_name">Picture In Picture Sample</string>
     <string name="action_settings">Settings</string>
 </resources>

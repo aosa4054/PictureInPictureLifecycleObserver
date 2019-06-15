@@ -6,7 +6,7 @@ import androidx.lifecycle.LifecycleObserver
 import androidx.lifecycle.OnLifecycleEvent
 
 abstract class PictureInPictureLifecycleObserver(
-    val activity: FragmentActivity
+    activity: FragmentActivity
 ) {
     /**
      * Activity.isInPictureInPictureMode changes soon after transforming the window,
@@ -36,7 +36,7 @@ abstract class PictureInPictureLifecycleObserver(
             @OnLifecycleEvent(Lifecycle.Event.ON_RESUME)
             fun onResume() {
                 if (augmentedIsInPictureInPictureMode) {
-                    onReturnFromPictureInPicture()
+                    onBackToFullScreenMode()
                     augmentedIsInPictureInPictureMode = false
                 }
             }
@@ -50,7 +50,7 @@ abstract class PictureInPictureLifecycleObserver(
             @OnLifecycleEvent(Lifecycle.Event.ON_STOP)
             fun onStop() {
                 if (augmentedIsInPictureInPictureMode) {
-                    onClosePictureInPictureWindow()
+                    onDismissPictureInPictureWindow()
                     augmentedIsInPictureInPictureMode = false
                     if (removeTaskAfterDismiss && onAnotherTask) activity.finishAndRemoveTask()
                 }
@@ -62,6 +62,6 @@ abstract class PictureInPictureLifecycleObserver(
         })
     }
 
-    abstract fun onReturnFromPictureInPicture()
-    abstract fun onClosePictureInPictureWindow()
+    abstract fun onBackToFullScreenMode()
+    abstract fun onDismissPictureInPictureWindow()
 }

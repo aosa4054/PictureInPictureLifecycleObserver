@@ -5,7 +5,6 @@ plugins {
 apply {
     plugin("kotlin-android")
     plugin("kotlin-android-extensions")
-    plugin("com.github.dcendents.android-maven")
 }
 
 repositories {
@@ -23,7 +22,6 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-
     }
 
     buildTypes {
@@ -42,6 +40,4 @@ dependencies {
     androidTestImplementation("androidx.test:runner:1.2.0")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.2.0")
     implementation("androidx.core:core-ktx:1.0.2")
-
-    implementation("com.github.aosa4054:PictureInPictureLifecycleObserver:1.0.0")
 }

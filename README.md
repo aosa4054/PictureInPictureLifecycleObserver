@@ -25,21 +25,21 @@ dependencies {
 ```kotlin
 class PIPActivity : AppCompatActivity() {
 
-    lateinit var pipLifecycleObserver: PictureInPictureLifecycleObserver
+    private lateinit var pipLifecycleObserver: PictureInPictureLifecycleObserver
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_pip)
         
         pipLifecycleObserver = object : PictureInPictureLifecycleObserver(this) {
-            override val finishDuplicatedTask = true
-
-            override fun onReturnFromPictureInPicture() {
+            override val removeTaskAfterDismiss = true
+            
+            override fun onBackToFullScreenMode() {
                 Toast.makeText(this@PIPActivity, "Returned", Toast.LENGTH_SHORT).show()
             }
-
-            override fun onClosePictureInPictureWindow() {
-                Toast.makeText(this@PIPActivity, "Ended", Toast.LENGTH_SHORT).show()
+            
+            override fun onDismissPictureInPictureWindow() {
+                Toast.makeText(this@PIPActivity, "Dismissed", Toast.LENGTH_SHORT).show()
             }
         }
     }

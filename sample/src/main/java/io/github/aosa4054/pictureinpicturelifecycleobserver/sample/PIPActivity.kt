@@ -30,6 +30,19 @@ class PIPActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        pipLifecycleObserver = object : PictureInPictureLifecycleObserver(this) {
+            override val removeTaskAfterDismiss = true
+
+            override fun onBackToFullScreenMode() {
+                Toast.makeText(this@PIPActivity, "Returned", Toast.LENGTH_SHORT).show()
+            }
+
+            override fun onDismissPictureInPictureWindow() {
+                Toast.makeText(this@PIPActivity, "Dismissed", Toast.LENGTH_SHORT).show()
+            }
+        }
+
         setContentView(R.layout.activity_pip)
 
         fab.setOnClickListener {
@@ -52,18 +65,6 @@ class PIPActivity : AppCompatActivity() {
                 enterPictureInPictureMode(params)
             } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
                 enterPictureInPictureMode()
-            }
-        }
-
-        pipLifecycleObserver = object : PictureInPictureLifecycleObserver(this) {
-            override val removeTaskAfterDismiss = true
-
-            override fun onReturnFromPictureInPicture() {
-                Toast.makeText(this@PIPActivity, "Returned", Toast.LENGTH_SHORT).show()
-            }
-
-            override fun onClosePictureInPictureWindow() {
-                Toast.makeText(this@PIPActivity, "Ended", Toast.LENGTH_SHORT).show()
             }
         }
     }
