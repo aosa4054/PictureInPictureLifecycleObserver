@@ -8,6 +8,10 @@ apply {
     plugin("com.github.dcendents.android-maven")
 }
 
+repositories {
+    mavenCentral()
+}
+
 android {
     compileSdkVersion(28)
 
@@ -35,10 +39,9 @@ dependencies {
 
     implementation("androidx.appcompat:appcompat:1.0.2")
     testImplementation("junit:junit:4.12")
-    androidTestImplementation("androidx.test:runner:1.1.1")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.1.1")
+    androidTestImplementation("androidx.test:runner:1.2.0")
+    androidTestImplementation("androidx.test.espresso:espresso-core:3.2.0")
     implementation("androidx.core:core-ktx:1.0.2")
-}
-repositories {
-    mavenCentral()
+
+    implementation("com.github.aosa4054:PictureInPictureLifecycleObserver:1.0.0")
 }
