@@ -2,7 +2,7 @@
 ![Platform](https://img.shields.io/badge/Platform-Android-orange.svg)
 ![API](https://img.shields.io/badge/API-24%2B-green.svg)
 ![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)
-
+[![](https://jitpack.io/v/aosa4054/PictureInPictureLifecycleObserver.svg)](https://jitpack.io/#aosa4054/PictureInPictureLifecycleObserver)
 
 Helps you to manage lifecycle flags related to Picture in picture mode
 
