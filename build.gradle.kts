@@ -17,10 +17,11 @@ allprojects {
     repositories {
         google()
         jcenter()
+        maven { url = java.net.URI.create("https://jitpack.io") }
     }
 }
 
-tasks.create("clean", type = Delete::class) {
+tasks.create("delete", type = Delete::class) {
     delete(rootProject.buildDir)
 }
 
