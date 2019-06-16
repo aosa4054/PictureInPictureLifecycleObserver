@@ -17,7 +17,6 @@ allprojects {
     repositories {
         google()
         jcenter()
-        maven { url = java.net.URI.create("https://jitpack.io") }
     }
 }
 

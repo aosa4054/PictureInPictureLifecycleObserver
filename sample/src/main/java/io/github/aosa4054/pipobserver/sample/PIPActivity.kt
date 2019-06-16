@@ -1,4 +1,4 @@
-package io.github.aosa4054.pictureinpicturelifecycleobserver.sample
+package io.github.aosa4054.pipobserver.sample
 
 import android.app.PendingIntent
 import android.app.PictureInPictureParams
@@ -16,8 +16,8 @@ import android.os.Bundle
 import android.util.Rational
 import android.view.View
 import android.widget.Toast
-import io.github.aosa4054.pictureinpicturelifecycleobserver.PictureInPictureLifecycleObserver
 import kotlinx.android.synthetic.main.activity_pip.*
+import pipobserver.sample.R
 
 class PIPActivity : AppCompatActivity() {
 

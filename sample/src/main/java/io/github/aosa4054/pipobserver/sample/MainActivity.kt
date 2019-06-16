@@ -1,13 +1,13 @@
-package io.github.aosa4054.pictureinpicturelifecycleobserver.sample
+package io.github.aosa4054.pipobserver.sample
 
 import android.content.Intent
 import android.os.Bundle
-import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity;
 import android.view.Menu
 import android.view.MenuItem
 
 import kotlinx.android.synthetic.main.activity_main.*
+import pipobserver.sample.R
 
 class MainActivity : AppCompatActivity() {
 

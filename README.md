@@ -15,8 +15,10 @@ repositories {
     maven { url "https://jitpack.io" }
 }
 
-dependencies {
-    implementation 'com.github.aosa4054:PictureInPictureLifecycleObserver:1.0.0'
+allprojects{
+    dependencies {
+        implementation 'com.github.aosa4054:PictureInPictureLifecycleObserver:1.0.0'
+    }
 }
 ```
 

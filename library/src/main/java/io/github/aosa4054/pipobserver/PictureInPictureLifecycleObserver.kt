@@ -1,4 +1,4 @@
-package io.github.aosa4054.pictureinpicturelifecycleobserver
+package io.github.aosa4054.pipobserver
 
 import androidx.fragment.app.FragmentActivity
 import androidx.lifecycle.Lifecycle
@@ -14,8 +14,8 @@ abstract class PictureInPictureLifecycleObserver(
      * this param is used for distinguish that and call either onReturnFromPictureInPicture or onClosePictureInPictureWindow
      * @see removeTaskAfterDismiss
      *
-     * @see onReturnFromPictureInPicture
-     * @see onClosePictureInPictureWindow
+     * @see onBackToFullScreenMode
+     * @see onDismissPictureInPictureWindow
      */
     var augmentedIsInPictureInPictureMode = false
 
