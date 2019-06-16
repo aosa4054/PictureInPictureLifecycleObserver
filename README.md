@@ -17,7 +17,8 @@ repositories {
 
 allprojects{
     dependencies {
-        implementation 'com.github.aosa4054:PictureInPictureLifecycleObserver:1.0.0'
+        // please do NOT use version 1.0.0 because the version includes a bug and you cannot import library package 
+        implementation 'com.github.aosa4054:PictureInPictureLifecycleObserver:1.0.1'
     }
 }
 ```
